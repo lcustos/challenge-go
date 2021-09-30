@@ -1,4 +1,4 @@
-package piscine
+package tls_challenge_go_21_22
 
 import "github.com/01-edu/z01"
 
