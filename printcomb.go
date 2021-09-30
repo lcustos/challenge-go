@@ -3,8 +3,8 @@ package tls_challenge_go_21_22
 import "github.com/01-edu/z01"
 
 func PrintComb() {
-	for i := '0'; i <= '9'; i++ {
-		for j := '0'; j <= '9'; j++ {
+	for i := '0'; i <= '7'; i++ {
+		for j := '0'; j <= '8'; j++ {
 			for k := '0'; k <= '9'; k++ {
 				if i < j {
 					if j < k {
@@ -23,5 +23,4 @@ func PrintComb() {
 		}
 
 	}
-	z01.PrintRune('\n')
 }
