@@ -26,7 +26,6 @@ func PrintCombN(n int) {
 			}
 		}
 		z01.PrintRune('\n')
-
 	} else if n == 3 {
 		for i := '0'; i <= '9'; i++ {
 			for j := '0'; j <= '9'; j++ {
@@ -46,7 +45,6 @@ func PrintCombN(n int) {
 			}
 		}
 		z01.PrintRune('\n')
-
 	} else if n == 4 {
 		for i := '0'; i <= '9'; i++ {
 			for j := '0'; j <= '9'; j++ {
@@ -63,7 +61,6 @@ func PrintCombN(n int) {
 										z01.PrintRune(',')
 										z01.PrintRune(' ')
 									}
-
 								}
 							}
 						}
@@ -72,7 +69,6 @@ func PrintCombN(n int) {
 			}
 		}
 		z01.PrintRune('\n')
-
 	} else if n == 5 {
 		for i := '0'; i <= '9'; i++ {
 			for j := '0'; j <= '9'; j++ {
@@ -102,7 +98,6 @@ func PrintCombN(n int) {
 			}
 		}
 		z01.PrintRune('\n')
-
 	} else if n == 6 {
 		for i := '0'; i <= '9'; i++ {
 			for j := '0'; j <= '9'; j++ {
@@ -137,7 +132,6 @@ func PrintCombN(n int) {
 			}
 		}
 		z01.PrintRune('\n')
-
 	} else if n == 7 {
 		for i := '0'; i <= '9'; i++ {
 			for j := '0'; j <= '9'; j++ {
@@ -177,7 +171,6 @@ func PrintCombN(n int) {
 			}
 		}
 		z01.PrintRune('\n')
-
 	} else if n == 8 {
 		for i := '0'; i <= '9'; i++ {
 			for j := '0'; j <= '9'; j++ {
@@ -207,7 +200,6 @@ func PrintCombN(n int) {
 																		z01.PrintRune(' ')
 																	}
 																}
-
 															}
 														}
 													}
@@ -223,7 +215,6 @@ func PrintCombN(n int) {
 			}
 		}
 		z01.PrintRune('\n')
-
 	} else if n == 9 {
 		for i := '0'; i <= '9'; i++ {
 			for j := '0'; j <= '9'; j++ {
