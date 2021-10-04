@@ -6,7 +6,7 @@ func calcComb(n int) []string {
 	if n == 1 {
 		return []string{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
 	}
-	var precedent = calcComb(n - 1)
+	precedent := calcComb(n - 1)
 	var result []string
 	for _, str := range precedent {
 		for i := str[len(str)-1] - '0' + 1; i < 10; i++ {
