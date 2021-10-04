@@ -29,6 +29,8 @@ func PrintCombN(n int) {
 		if i+1 != len(result) {
 			_ = z01.PrintRune(',')
 			_ = z01.PrintRune(' ')
+
 		}
 	}
+	_ = z01.PrintRune('\n')
 }
