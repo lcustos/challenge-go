@@ -5,7 +5,7 @@ func BasicAtoi2(s string) int {
 	c := 0
 	a_s := []rune(s)
 	for _, word := range a_s {
-		if word > 57 || word == 32 {
+		if word > 57 || word < 48 {
 			return 0
 		} else {
 			for i := '0'; i < word; i++ {
