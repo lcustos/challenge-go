@@ -1,6 +1,5 @@
 package tls_challenge_go_21_22
 
-
 func SortIntegerTable(table []int) {
 	i := 1
 	for i < len(table) {
