@@ -1,6 +1,5 @@
 package tls_challenge_go_21_22
 
-import "fmt"
 
 func SortIntegerTable(table []int) {
 	i := 1
@@ -12,5 +11,4 @@ func SortIntegerTable(table []int) {
 			i++
 		}
 	}
-	fmt.Println(table)
 }
