@@ -1,11 +1,9 @@
 package tls_challenge_go_21_22
 
-import "strconv"
-
 func BasicAtoi2(s string) int {
-	i, err := strconv.Atoi(s)
+	i := BasicAtoi(s)
 
-	if err == nil {
+	if i == int('s') {
 		return i
 	} else {
 		return 0
