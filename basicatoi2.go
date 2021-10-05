@@ -16,5 +16,4 @@ func BasicAtoi2(s string) int {
 		}
 	}
 	return o_number
-
 }
