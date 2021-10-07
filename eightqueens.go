@@ -45,7 +45,6 @@ func Recurse(point Point, current []Point, n int) {
 					Recurse(nextStart, current, n)
 
 				}
-
 			}
 		}
 	}
