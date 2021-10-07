@@ -1,7 +1,5 @@
 package tls_challenge_go_21_22
 
-import "fmt"
-
 const N = 8
 
 var position = [N]int{}
@@ -20,9 +18,9 @@ func isSafe(queen_number, row_position int) bool {
 func solve(k int) {
 	if k == N {
 		for i := 0; i < N; i++ {
-			fmt.Print(position[i] + 1)
+			print(position[i] + 1)
 		}
-		fmt.Print("\n")
+		print("\n")
 	} else {
 		for i := 0; i < N; i++ {
 			if isSafe(k, i) {
