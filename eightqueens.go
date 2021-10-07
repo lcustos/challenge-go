@@ -14,7 +14,6 @@ var results = make([][]Point, 0)
 
 func main() {
 	Solve(8)
-
 }
 
 func Solve(n int) {
@@ -29,6 +28,7 @@ func Solve(n int) {
 	}
 	fmt.Printf("There were %d results\n", len(results))
 }
+
 func Recurse(point Point, current []Point, n int) {
 	if CanPlace(point, current) {
 		current = append(current, point)
@@ -50,6 +50,7 @@ func Recurse(point Point, current []Point, n int) {
 		}
 	}
 }
+
 func CanPlace(target Point, board []Point) bool {
 	for _, point := range board {
 		if CanAttack(point, target) {
