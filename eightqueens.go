@@ -1,11 +1,13 @@
 package tls_challenge_go_21_22
 
-const N = 8
+import "github.com/01-edu/z01"
 
-var position = [N]int{}
+const N = '8'
 
-func isSafe(queen_number, row_position int) bool {
-	for i := 0; i < queen_number; i++ {
+var position = [N]rune{}
+
+func isSafe(queen_number, row_position rune) bool {
+	for i := '0'; i < queen_number; i++ {
 		other_row_pos := position[i]
 
 		if other_row_pos == row_position || other_row_pos == row_position-(queen_number-i) || other_row_pos == row_position+(queen_number-i) {
@@ -15,14 +17,14 @@ func isSafe(queen_number, row_position int) bool {
 	return true
 }
 
-func solve(k int) {
+func solve(k rune) {
 	if k == N {
-		for i := 0; i < N; i++ {
-			print(position[i] + 1)
+		for i := '0'; i < N; i++ {
+			z01.PrintRune(position[i] + 1)
 		}
-		print("\n")
+		z01.PrintRune('\n')
 	} else {
-		for i := 0; i < N; i++ {
+		for i := '0'; i < N; i++ {
 			if isSafe(k, i) {
 				position[k] = i
 				solve(k + 1)
@@ -32,5 +34,5 @@ func solve(k int) {
 }
 
 func EightQueens() {
-	solve(0)
+	solve('0')
 }
