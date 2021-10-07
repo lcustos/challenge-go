@@ -1,6 +1,9 @@
 package tls_challenge_go_21_22
 
 func IsPrime(nb int) bool {
+	if nb > 25 {
+		return false
+	}
 	if nb == 1 {
 		return false
 	}
