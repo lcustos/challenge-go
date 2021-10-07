@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.RecursivePower(-9, -6))
+	fmt.Println(piscine.IsPrime(-7))
 }

@@ -4,6 +4,9 @@ func IsPrime(nb int) bool {
 	if nb == 1 {
 		return false
 	}
+	if nb < 0 {
+		nb = nb * -1
+	}
 	for i := 2; i < nb; i++ {
 		for i2 := 2; i2 < nb; i2++ {
 			if i*i2 == nb {
