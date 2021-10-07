@@ -1,10 +1,8 @@
 package main
 
-import (
-	piscine "challenge-go"
-	"fmt"
-)
+import tls_challenge_go_21_22 "challenge-go"
 
 func main() {
-	fmt.Println(piscine.FindNextPrime(0))
+	tls_challenge_go_21_22.EightQueens()
+
 }
