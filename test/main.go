@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.FindNextPrime(-445855))
+	fmt.Println(piscine.FindNextPrime(0))
 }
