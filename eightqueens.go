@@ -6,11 +6,11 @@ const N = '8'
 
 var position = [N]rune{}
 
-func isSafe(queen_number, row_position rune) bool {
-	for i := '0'; i < queen_number; i++ {
-		other_row_pos := position[i]
+func isSafe(queenNumber, rowPosition rune) bool {
+	for i := '0'; i < queenNumber; i++ {
+		otherRowPos := position[i]
 
-		if other_row_pos == row_position || other_row_pos == row_position-(queen_number-i) || other_row_pos == row_position+(queen_number-i) {
+		if otherRowPos == rowPosition || otherRowPos == rowPosition-(queenNumber-i) || otherRowPos == rowPosition+(queenNumber-i) {
 			return false
 		}
 	}
