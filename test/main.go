@@ -1,7 +1,10 @@
 package main
 
-import tls_challenge_go_21_22 "challenge-go"
+import (
+	tls_challenge_go_21_22 "challenge-go"
+	"fmt"
+)
 
 func main() {
-	tls_challenge_go_21_22.EightQueens()
+	fmt.Println(tls_challenge_go_21_22.IsPrime(847339))
 }
