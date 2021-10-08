@@ -13,4 +13,5 @@ func IsPrime(nb int) bool {
 		}
 	}
 	return true
+
 }
