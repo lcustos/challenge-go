@@ -6,7 +6,7 @@ func IsUpper(s string) bool {
 		if rune(s[i]) >= 'A' && rune(s[i]) <= 'Z' {
 			IU = true
 		} else {
-			IU = false
+			return false
 		}
 	}
 	return IU
