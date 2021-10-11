@@ -1,10 +1,9 @@
 package main
 
-import (
-	piscine "challenge-go"
-	"fmt"
-)
+import piscine "challenge-go"
 
 func main() {
-	fmt.Println(piscine.ToLower("Hello! How are you?"))
+	piscine.PrintNbrInOrder(321)
+	piscine.PrintNbrInOrder(0)
+	piscine.PrintNbrInOrder(321)
 }
