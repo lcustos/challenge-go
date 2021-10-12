@@ -1,47 +1,47 @@
 package tls_challenge_go_21_22
 
-import "github.com/01-edu/z01"
+import (
+	"github.com/01-edu/z01"
+)
 
 func PrintNbrBase(s int, t string) {
-	ans := ""
-	ln := 0
-	for _, c := range t {
-		if c == c {
-			ln++
-		}
-	}
-	mx_p := ln
+	var a int
+	tab := []int{}
 	if s < 0 {
-		ans = "-"
-		mx_p *= -1
+		z01.PrintRune('-')
+		s = -s
 	}
-	if ln > 1 {
-
-		for s/mx_p >= ln {
-			mx_p *= ln
-		}
-		for mx_p != 0 {
-			ans = ans + string(t[s/mx_p])
-			s = s - s/mx_p*mx_p
-			mx_p /= ln
-		}
-		x := map[rune]bool{}
-		for _, c := range t {
-			if c == '+' || c == '-' {
-				ans = "NV"
-				break
-			}
-			if x[c] == false {
-				x[c] = true
-			} else {
-				ans = "NV"
-				break
-			}
-		}
-	} else {
-		ans = "NV"
+	if len(t) <= 1 {
+		z01.PrintRune('N')
+		z01.PrintRune('V')
+		z01.PrintRune('\n')
 	}
-	for _, c := range ans {
-		z01.PrintRune(c)
+	for _, word := range t {
+		if string(word) == "-" {
+			z01.PrintRune('N')
+			z01.PrintRune('V')
+			z01.PrintRune('\n')
+		}
+	}
+	i := 0
+	for j := 1; j <= len(t)-1; j++ {
+		if t[i] == t[j] {
+			z01.PrintRune('N')
+			z01.PrintRune('V')
+			return
+		}
+	}
+	for s > 0 {
+		a = s % len(t)
+		tab = append(tab, a)
+		s /= len(t)
+	}
+	mod := '0'
+	for m := len(tab) - 1; m >= 0; m-- {
+		for k := '0'; k < rune(t[tab[m]]); k++ {
+			mod++
+		}
+		z01.PrintRune(mod)
+		mod = '0'
 	}
 }

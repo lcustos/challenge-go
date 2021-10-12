@@ -20,7 +20,7 @@ func PrintNbrInOrder(n int) {
 
 func ToMassive(n int) []int {
 	var res []int
-	for n > 0 {
+	for n >= 0 {
 		if n == 0 {
 			res = append(res, n)
 		} else {
