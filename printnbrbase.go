@@ -19,12 +19,13 @@ func PrintNbrBase(s int, t string) {
 			z01.PrintRune('\n')
 		}
 	}
-	i := 0
-	for j := 1; j <= len(t)-1; j++ {
-		if t[i] == t[j] {
-			z01.PrintRune('N')
-			z01.PrintRune('V')
-			return
+	for i := 0; i <= len(t)-1; i++ {
+		for j := i + 1; j <= len(t)-1; j++ {
+			if t[i] == t[j] {
+				z01.PrintRune('N')
+				z01.PrintRune('V')
+				return
+			}
 		}
 	}
 	if s < 0 {
