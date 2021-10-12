@@ -36,12 +36,12 @@ func PrintNbrBase(s int, t string) {
 		tab = append(tab, a)
 		s /= len(t)
 	}
-	mod := '0'
+	mod := 0
 	for m := len(tab) - 1; m >= 0; m-- {
-		for k := '0'; k < rune(t[tab[m]]); k++ {
+		for k := 0; k < int(t[tab[m]]); k++ {
 			mod++
 		}
-		z01.PrintRune(mod)
-		mod = '0'
+		z01.PrintRune(rune(mod))
+		mod = 0
 	}
 }
