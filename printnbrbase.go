@@ -10,13 +10,13 @@ func PrintNbrBase(s int, t string) {
 	if len(t) <= 1 {
 		z01.PrintRune('N')
 		z01.PrintRune('V')
-		z01.PrintRune('\n')
+		return
 	}
 	for _, word := range t {
 		if string(word) == "-" {
 			z01.PrintRune('N')
 			z01.PrintRune('V')
-			z01.PrintRune('\n')
+			return
 		}
 	}
 	for i := 0; i <= len(t)-1; i++ {
