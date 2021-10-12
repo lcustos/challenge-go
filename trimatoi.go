@@ -3,15 +3,14 @@ package tls_challenge_go_21_22
 func TrimAtoi(s string) int {
 	negate := false
 	table := []rune(s)
-	o_number := 0
+	oNumber := 0
 	c := 0
-	a_s := []rune(s)
 	e := 0
 	if len(table) != 0 {
-		for _, word := range a_s {
+		for _, word := range table {
 			if word > '9' || word < '0' {
 				if word == '-' {
-					if o_number == 0 {
+					if oNumber == 0 {
 						negate = true
 					}
 				}
@@ -19,15 +18,15 @@ func TrimAtoi(s string) int {
 				for i := '0'; i < word; i++ {
 					c++
 				}
-				o_number = o_number*10 + c
+				oNumber = oNumber*10 + c
 				c = 0
 			}
 		}
 		if negate == false {
-			e = o_number
+			e = oNumber
 			return e
 		} else {
-			e = o_number * -1
+			e = oNumber * -1
 			return e
 		}
 	}
