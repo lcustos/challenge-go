@@ -7,10 +7,6 @@ import (
 func PrintNbrBase(s int, t string) {
 	var a int
 	tab := []int{}
-	if s < 0 {
-		z01.PrintRune('-')
-		s = -s
-	}
 	if len(t) <= 1 {
 		z01.PrintRune('N')
 		z01.PrintRune('V')
@@ -30,6 +26,10 @@ func PrintNbrBase(s int, t string) {
 			z01.PrintRune('V')
 			return
 		}
+	}
+	if s < 0 {
+		z01.PrintRune('-')
+		s = -s
 	}
 	for s > 0 {
 		a = s % len(t)
