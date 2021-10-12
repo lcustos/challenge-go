@@ -30,10 +30,14 @@ func PrintNbrBase(s int, t string) {
 	}
 	if s < 0 {
 		z01.PrintRune('-')
-		s = -s
 	}
-	for s > 0 {
-		a = s % len(t)
+	for s != 0 {
+		if s%len(t) < 0 {
+			a = -(s % len(t))
+		} else {
+			a = s % len(t)
+		}
+
 		tab = append(tab, a)
 		s /= len(t)
 	}
