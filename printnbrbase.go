@@ -37,7 +37,6 @@ func PrintNbrBase(s int, t string) {
 		} else {
 			a = s % len(t)
 		}
-
 		tab = append(tab, a)
 		s /= len(t)
 	}
