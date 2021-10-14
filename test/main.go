@@ -1,9 +1,10 @@
 package main
 
 import (
-	piscine "challenge-go"
+	piscine "challenge-go/Quest 4"
+	"fmt"
 )
 
 func main() {
-	piscine.PrintNbrBase(-9365859849514908, "0123456789")
+	fmt.Println(piscine.Capitalize("Hello! How are you? How+are+things+4you?"))
 }
