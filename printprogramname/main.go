@@ -7,9 +7,18 @@ import (
 )
 
 func main() {
-	NameOfProgramm := os.Args
-	for _, i := range NameOfProgramm[0] {
-		z01.PrintRune(i)
+	var index int
+	NameOfProgramm := os.Args[0]
+	for i := 0; i < len(NameOfProgramm); i++ {
+		if NameOfProgramm[i] == '\\' || NameOfProgramm[i] == '/' {
+			index = i
+		}
 	}
-	z01.PrintRune(10)
+	for _, element := range NameOfProgramm[index+1:] {
+		if element == '.' {
+			break
+		}
+		z01.PrintRune(element)
+	}
+	z01.PrintRune('\n')
 }
