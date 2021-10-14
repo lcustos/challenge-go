@@ -1,0 +1,20 @@
+package main
+
+import (
+	"github.com/01-edu/z01"
+	"os"
+)
+
+func main() {
+	arguments := os.Args
+	len := 0
+	for i := range arguments {
+		len = i
+	}
+	for i := len; i >= 1; i-- {
+		for _, k := range arguments[i] {
+			z01.PrintRune(k)
+		}
+		z01.PrintRune(10)
+	}
+}
