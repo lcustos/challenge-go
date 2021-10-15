@@ -12,6 +12,7 @@ func main() {
 	for _, val := range arg {
 		if val == "--upper" {
 			flag = true
+			arg = os.Args[2:]
 		}
 	}
 	if flag {
