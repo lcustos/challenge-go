@@ -14,7 +14,6 @@ func main() {
 			flag = true
 		}
 	}
-
 	if flag {
 		for i := 0; i <= len(arg)-1; i++ {
 			z01.PrintRune(ToUpper(ConvertToLetter(arg[i])))
@@ -28,7 +27,6 @@ func main() {
 		}
 		z01.PrintRune(10)
 	}
-
 }
 
 func ConvertToLetter(s string) rune {
