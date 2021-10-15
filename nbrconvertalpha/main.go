@@ -9,7 +9,7 @@ import (
 func main() {
 	arg := os.Args[1:]
 	flag := false
-	if len(os.Args) == 0 {
+	if len(arg) == 0 {
 		z01.PrintRune('\n')
 		return
 	}
