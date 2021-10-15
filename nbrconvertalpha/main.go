@@ -33,6 +33,9 @@ func main() {
 func ConvertToLetter(s string) rune {
 	numb := 0
 	for _, i := range s {
+		if i == 0 {
+			return 0
+		}
 		count := 0
 		for k := '0'; k < i; k++ {
 			count++
