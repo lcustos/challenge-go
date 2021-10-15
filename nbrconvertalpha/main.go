@@ -10,7 +10,6 @@ func main() {
 	arg := os.Args[1:]
 	flag := false
 	if len(arg) == 0 {
-		z01.PrintRune('\n')
 		return
 	}
 	for _, val := range arg {
