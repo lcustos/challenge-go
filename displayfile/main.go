@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/01-edu/z01"
 	"io/ioutil"
 	"os"
 )
@@ -10,10 +11,12 @@ func main() {
 	fileName := "quest8.txt"
 	if len(os.Args) < 2 {
 		fmt.Print("File name missing")
+		z01.PrintRune('\n')
 		return
 	}
 	if len(os.Args) > 2 {
 		fmt.Print("Too many arguments")
+		z01.PrintRune('\n')
 		return
 	}
 	data, err := ioutil.ReadFile(fileName)
@@ -22,4 +25,5 @@ func main() {
 		return
 	}
 	fmt.Print(string(data))
+	z01.PrintRune('\n')
 }
