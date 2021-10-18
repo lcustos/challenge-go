@@ -1,25 +1,23 @@
 package tls_challenge_go_21_22
 
 func SplitWhiteSpaces(s string) []string {
-	len := 0
+	len1 := 0
 	len2 := 0
 	for _, i := range s {
 		if i == ' ' || i == '\t' || i == '\n' {
-			len++
+			len1++
 		}
 	}
-	len++
 	if s[0] == ' ' {
-		len--
+		len1--
 	}
-	if s[len] == ' ' {
-		len--
+	if s[len1] == ' ' {
+		len1--
 	}
 	for i := range s {
 		len2 = i
 	}
-
-	res := make([]string, len)
+	res := make([]string, len1)
 	check := true
 	k := 0
 	for i := 0; i <= len2; i++ {
