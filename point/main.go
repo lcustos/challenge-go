@@ -20,11 +20,13 @@ func main() {
 	PrintNbr(x)
 	z01.PrintRune(' ')
 	z01.PrintRune(',')
+	z01.PrintRune(' ')
 	z01.PrintRune('y')
 	z01.PrintRune(' ')
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
 	PrintNbr(y)
+	z01.PrintRune('\n')
 }
 
 func PrintNbr(n int) {
