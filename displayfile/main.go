@@ -9,17 +9,17 @@ import (
 func main() {
 	fileName := "quest8.txt"
 	if len(os.Args) < 2 {
-		fmt.Print("File name missing")
+		fmt.Println("File name missing")
 		return
 	}
 	if len(os.Args) > 2 {
-		fmt.Print("Too many arguments")
+		fmt.Println("Too many arguments")
 		return
 	}
 	data, err := ioutil.ReadFile(fileName)
 	if err != nil {
-		fmt.Print(err.Error())
+		fmt.Println(err.Error())
 		return
 	}
-	fmt.Print(string(data))
+	fmt.Println(string(data))
 }
