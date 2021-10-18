@@ -8,7 +8,8 @@ func SplitWhiteSpaces(s string) []string {
 			len1++
 		}
 	}
-	if len1 == 0 {
+	len1--
+	if len1 <= 0 {
 		len1++
 	}
 	if s[0] == ' ' {
