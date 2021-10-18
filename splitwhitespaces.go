@@ -8,6 +8,9 @@ func SplitWhiteSpaces(s string) []string {
 			len1++
 		}
 	}
+	if len1 == 0 {
+		len1++
+	}
 	if s[0] == ' ' {
 		len1--
 	}
@@ -17,7 +20,7 @@ func SplitWhiteSpaces(s string) []string {
 	for i := range s {
 		len2 = i
 	}
-	res := make([]string, len1)
+	res := make([]string, len1+1)
 	check := true
 	k := 0
 	for i := 0; i <= len2; i++ {
