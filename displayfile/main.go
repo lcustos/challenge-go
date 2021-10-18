@@ -9,7 +9,7 @@ import (
 func main() {
 	fileName := "quest8.txt"
 	if len(os.Args) < 2 {
-		fmt.Print("File name missing")
+		fmt.Printf("File name missing")
 		return
 	}
 	if len(os.Args) > 2 {
