@@ -26,6 +26,7 @@ func main() {
 	z01.PrintRune(' ')
 	PrintNbr(y)
 }
+
 func PrintNbr(n int) {
 	if n < 0 {
 		z01.PrintRune('-')
