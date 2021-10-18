@@ -12,13 +12,10 @@ func SplitWhiteSpaces(s string) []string {
 		res := []string{""}
 		return res
 	}
-	if space == 0 {
-		space++
-	}
 	for i := range s {
 		len2 = i
 	}
-	res := make([]string, space)
+	res := make([]string, space+1)
 	check := true
 	k := 0
 	for i := 0; i <= len2; i++ {
