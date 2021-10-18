@@ -18,7 +18,6 @@ func main() {
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
 	PrintNbr(x)
-	z01.PrintRune(' ')
 	z01.PrintRune(',')
 	z01.PrintRune(' ')
 	z01.PrintRune('y')
