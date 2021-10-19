@@ -45,7 +45,6 @@ func main() {
 			help()
 		} else if myArr[0] == "--order" || myArr[0] == "-o" {
 			order(myArr[1])
-
 		} else if myArr[0][0:3] == "--i" || myArr[0][0:2] == "-i" {
 			if ln < 2 {
 				if myArr[0][0:3] == "--i" {
