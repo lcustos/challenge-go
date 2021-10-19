@@ -1,30 +1,23 @@
 package tls_challenge_go_21_22
 
-func Split(s, sep string) []string {
-	sepa := 0
-	for j := 0; j <= len(s)-len(sep); j++ {
-		if s[j:j+len(sep)] == sep {
-			sepa++
+func Split(str, charset string) []string {
+	ln := 0
+
+	for i := range charset {
+		ln = i + 1
+	}
+
+	ln2 := 0
+	for i := range str {
+		ln2 = i + 1
+	}
+
+	for i := 0; i < ln2-ln; i++ {
+		if str[i:i+ln] == charset {
+			str = str[:i] + " " + str[i+ln:]
+			ln2 -= ln
 		}
 	}
-	if len(s) == 0 {
-		res := []string{""}
-		return res
-	}
-	res := make([]string, sepa+1)
-	check := true
-	k := 0
-	for j := 0; j <= len(s)-len(sep); j++ {
-		if s[j:j+len(sep)] == sep {
-			if !check {
-				k++
-			}
-			check = true
-			j++
-			continue
-		}
-		res[k] += string(s[j])
-		check = false
-	}
-	return res
+
+	return SplitWhiteSpaces(str)
 }
