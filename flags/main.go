@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/01-edu/z01"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -27,20 +28,16 @@ func main() {
 			}
 			if length > 9 && arg[:9] == "--insert=" {
 				runes_temp := []rune(arg[9:])
-
 				for i := 0; i < length-9; i++ {
 					runes = append(runes, runes_temp[i])
 				}
 				insert = true
-
 			} else if length > 3 && arg[:3] == "-i=" {
 				runes_temp := []rune(arg[3:])
-
 				for i := 0; i < length-3; i++ {
 					runes = append(runes, runes_temp[i])
 				}
 				insert = true
-
 			} else if (length == 7 && arg[:7] == "--order") || (length == 2 && arg[:2] == "-o") {
 				order = true
 				order_prev = true
@@ -62,7 +59,6 @@ func main() {
 				}
 			}
 			order_prev = false
-
 		}
 		if order {
 			Order(runes)
@@ -73,10 +69,8 @@ func main() {
 				z01.PrintRune(runes[i])
 			}
 		}
-
 		z01.PrintRune(10)
 	}
-
 }
 
 func Order(array []rune) {
@@ -84,7 +78,6 @@ func Order(array []rune) {
 	for index := range array {
 		len = index + 1
 	}
-
 	sorted := false
 	for !sorted {
 		count := 0
