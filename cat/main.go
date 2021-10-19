@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/01-edu/z01"
 	"io/ioutil"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -28,7 +29,6 @@ func main() {
 	first := true
 	for _, arg := range arguments {
 		file, err := os.Open(arg)
-
 		if err != nil {
 			for _, e := range err.Error() {
 				z01.PrintRune(e)
