@@ -1,19 +1,54 @@
 package tls_challenge_go_21_22
 
 func Split(str, charset string) []string {
-	ln := 0
-	for i := range charset {
-		ln = i + 1
-	}
-	ln2 := 0
+	length := 0
+	sublength := 0
 	for i := range str {
-		ln2 = i + 1
+		length = i + 1
 	}
-	for i := 0; i < ln2-ln; i++ {
-		if str[i:i+ln] == charset {
-			str = str[:i] + " " + str[i+ln:]
-			ln2 -= ln
+	for i := range charset {
+		sublength = i + 1
+	}
+	for i := 0; i < sublength; i++ {
+		str += " "
+	}
+	prev := false
+	len := 0
+	for i := 0; i < length; i++ {
+		if (str[i:i+sublength] == charset) && !prev {
+			prev = true
+			len++
+		} else {
+			prev = false
 		}
 	}
-	return SplitWhiteSpaces(str)
+	len++
+	arr := make([]string, len)
+	word := ""
+	arindex := 0
+	for i := 0; i < length; i++ {
+		if str[i:i+sublength] == charset {
+			l := 0
+			for i := range word {
+				l = i + 1
+			}
+			if l == 0 {
+				continue
+			}
+			arr[arindex] = word
+			arindex++
+			word = ""
+			i = i + sublength - 1
+			continue
+		}
+		word += string(str[i])
+	}
+	l := 0
+	for i := range word {
+		l = i + 1
+	}
+	if l != 0 {
+		arr[arindex] = word
+	}
+	return arr
 }
