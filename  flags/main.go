@@ -35,17 +35,14 @@ func help() {
 }
 
 func main() {
-
 	myArr := os.Args[1:]
 	ln := -1
-
 	for i := range myArr {
 		ln = i
 	}
 	if ln != -1 {
 		if myArr[0] == "-h" || myArr[0] == "--help" {
 			help()
-
 		} else if myArr[0] == "--order" || myArr[0] == "-o" {
 			order(myArr[1])
 
@@ -63,7 +60,6 @@ func main() {
 						myStr = insert(myStr, myArr[i])
 					}
 				}
-
 				if myArr[0][0:3] == "--i" {
 					myStr = insert(myStr, myArr[0][9:])
 				} else {
