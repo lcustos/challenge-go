@@ -36,7 +36,6 @@ func main() {
 	premier, _ := strconv.Atoi(args[0])
 	second, _ := strconv.Atoi(args[2])
 	if validNumber(premier, second) == true {
-
 		if args[1] == "%" && second == 0 {
 			fmt.Print("No Modulo by 0\n")
 		} else if args[1] == "/" && second == 0 {
