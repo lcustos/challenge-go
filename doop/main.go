@@ -1,9 +1,8 @@
 package main
 
 import (
-	"fmt"
+	tls_challenge_go_21_22 "challenge-go"
 	"os"
-	"strconv"
 )
 
 func validateOperator(test string) bool {
@@ -27,32 +26,32 @@ func validNumber(a, b int) bool {
 func main() {
 	args := os.Args[1:]
 	if len(args) > 3 || len(args) < 3 {
-		fmt.Print()
+		print()
 		return
 	} else if validateOperator(args[1]) == false {
-		fmt.Print()
+		print()
 		return
 	}
-	premier, _ := strconv.Atoi(args[0])
-	second, _ := strconv.Atoi(args[2])
+	premier := tls_challenge_go_21_22.BasicAtoi(args[0])
+	second := tls_challenge_go_21_22.BasicAtoi(args[2])
 	if validNumber(premier, second) == true {
 		if args[1] == "%" && second == 0 {
-			fmt.Print("No Modulo by 0\n")
+			print("No Modulo by 0\n")
 		} else if args[1] == "/" && second == 0 {
-			fmt.Print("No division by 0\n")
+			print("No division by 0\n")
 		} else if args[1] == "+" {
-			fmt.Println(premier + second)
+			println(premier + second)
 		} else if args[1] == "-" {
-			fmt.Println(premier - second)
+			println(premier - second)
 		} else if args[1] == "*" {
-			fmt.Println(premier * second)
+			println(premier * second)
 		} else if args[1] == "/" {
-			fmt.Println(premier / second)
+			println(premier / second)
 		} else {
-			fmt.Println(premier % second)
+			println(premier % second)
 		}
 	} else {
-		fmt.Print()
+		print()
 		return
 	}
 }
