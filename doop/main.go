@@ -26,32 +26,32 @@ func validNumber(a, b int) bool {
 func main() {
 	args := os.Args[1:]
 	if len(args) > 3 || len(args) < 3 {
-		print()
+		os.Stderr.WriteString(" ")
 		return
 	} else if validateOperator(args[1]) == false {
-		print()
+		os.Stderr.WriteString("")
 		return
 	}
 	premier := tls_challenge_go_21_22.BasicAtoi(args[0])
 	second := tls_challenge_go_21_22.BasicAtoi(args[2])
 	if validNumber(premier, second) == true {
 		if args[1] == "%" && second == 0 {
-			print("No Modulo by 0\n")
+			os.Stderr.WriteString("No Modulo by 0\n")
 		} else if args[1] == "/" && second == 0 {
-			print("No division by 0\n")
+			os.Stderr.WriteString("No division by 0\n")
 		} else if args[1] == "+" {
-			println(premier + second)
+			os.Stderr.WriteString(string(premier + second))
 		} else if args[1] == "-" {
-			println(premier - second)
+			os.Stderr.WriteString(string(premier - second))
 		} else if args[1] == "*" {
-			println(premier * second)
+			os.Stderr.WriteString(string(premier * second))
 		} else if args[1] == "/" {
-			println(premier / second)
+			os.Stderr.WriteString(string(premier / second))
 		} else {
-			println(premier % second)
+			os.Stderr.WriteString(string(premier % second))
 		}
 	} else {
-		print()
+		os.Stderr.WriteString("")
 		return
 	}
 }
