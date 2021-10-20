@@ -1,6 +1,7 @@
 package main
 
 import (
+	"io"
 	"io/ioutil"
 	"os"
 
@@ -8,48 +9,25 @@ import (
 )
 
 func main() {
-	arguments := os.Args[1:]
-	length := 0
-	for l := range arguments {
-		length = l + 1
-	}
-	if length == 0 {
-		input, err := ioutil.ReadAll(os.Stdin)
-		for _, j := range string(input) {
-			z01.PrintRune(j)
-		}
-		if err != nil {
-			for _, e := range err.Error() {
-				z01.PrintRune(e)
+	args := os.Args
+	if len(args) == 1 {
+		bytes, _ := ioutil.ReadAll(os.Stdin)
+		a := string(bytes)
+		io.WriteString(os.Stdout, a)
+	} else {
+		for i := 1; i < len(args); i++ {
+			content, err := ioutil.ReadFile(args[i])
+			strContent := string(content)
+			if err != nil {
+				errFirstPart := "ERROR: open "
+				errScnPart := ": no such file or directory\n"
+				finalErr := errFirstPart + args[i] + errScnPart
+				io.WriteString(os.Stdout, finalErr)
+				os.Exit(1)
 			}
-			z01.PrintRune('\n')
-		}
-		return
-	}
-	first := true
-	for _, arg := range arguments {
-		file, err := os.Open(arg)
-		if err != nil {
-			for _, e := range err.Error() {
-				z01.PrintRune(e)
+			for _, j := range strContent {
+				z01.PrintRune(j)
 			}
-			z01.PrintRune('\n')
 		}
-		return
-		f, err := ioutil.ReadAll(file)
-		if !first {
-			z01.PrintRune('\n')
-		}
-		first = false
-		for _, text := range string(f) {
-			z01.PrintRune(text)
-		}
-		if err != nil {
-			for _, e := range err.Error() {
-				z01.PrintRune(e)
-			}
-			z01.PrintRune('\n')
-		}
-		file.Close()
 	}
 }
