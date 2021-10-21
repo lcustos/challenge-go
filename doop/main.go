@@ -40,39 +40,19 @@ func main() {
 			os.Stderr.WriteString("No division by 0\n")
 		} else if args[1] == "+" {
 			result := premier + second
-			sresult := "0"
-			for i := 0; i <= result; i++ {
-				sresult += "1"
-			}
-			os.Stderr.WriteString(sresult)
+			os.Stderr.WriteString(result)
 		} else if args[1] == "-" {
 			result := premier + second
-			sresult := "0"
-			for i := 0; i <= result; i++ {
-				sresult += "1"
-			}
-			os.Stderr.WriteString(sresult)
+			os.Stderr.WriteString(result)
 		} else if args[1] == "*" {
 			result := premier + second
-			sresult := "0"
-			for i := 0; i <= result; i++ {
-				sresult += "1"
-			}
-			os.Stderr.WriteString(sresult)
+			os.Stderr.WriteString(result)
 		} else if args[1] == "/" {
 			result := premier + second
-			sresult := "0"
-			for i := 0; i <= result; i++ {
-				sresult += "1"
-			}
-			os.Stderr.WriteString(sresult)
+			os.Stderr.WriteString(result)
 		} else {
 			result := premier + second
-			sresult := "0"
-			for i := 0; i <= result; i++ {
-				sresult += "1"
-			}
-			os.Stderr.WriteString(sresult)
+			os.Stderr.WriteString(result)
 		}
 	} else {
 		os.Stderr.WriteString("")
