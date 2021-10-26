@@ -31,15 +31,15 @@ func main() {
 		os.Stderr.WriteString("")
 		return
 	}
-	premier := Atoi(args[0])
-	second := Atoi(args[2])
-	if validNumber(premier, second) == true {
-		if args[1] == "%" && second == 0 {
+	premier := args[0]
+	second := args[2]
+	if validNumber(Atoi(premier), Atoi(second)) == true {
+		if args[1] == "%" && Atoi(second) == 0 {
 			os.Stderr.WriteString("No Modulo by 0\n")
-		} else if args[1] == "/" && second == 0 {
+		} else if args[1] == "/" && Atoi(second) == 0 {
 			os.Stderr.WriteString("No division by 0\n")
 		} else if args[1] == "+" {
-			result := premier + second
+			result := Atoi(premier) + Atoi(second)
 			os.Stderr.WriteString(result)
 		} else if args[1] == "-" {
 			result := premier + second
